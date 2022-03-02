@@ -39,6 +39,40 @@
     <!-- end of preloader -->
 
     <div class="container-box__wrapper">
+        <div class="logo">
+            <a href="#"><img src="dist/img/logo.jpeg" alt=""></a>
+        </div>
+
+        <div class="menu-bar">
+            <button class="menu-bar__toggler"><i class="fas fa-bars"></i></button>
+
+            <div class="menu-bar__list">
+                <a href="#" class="menu-bar__link">Home</a>
+                <a href="#" class="menu-bar__link">Questions</a>
+                <a href="#" class="menu-bar__link">Account</a>
+                <a href="#" class="menu-bar__link">About Us</a>
+                <a href="#" class="menu-bar__link">Log Out</a>
+            </div>
+        </div>
+
+        <div class="exam-timer">
+            <!-- date format MM/DD/YYYY hh:mm:ss -->
+            <div class="counter jquery-countdown" data-date="03/01/2022 2:59:00">
+                <div class="counter__item">
+                    <div class="counter__item--number">00</div>
+                    <div class="counter__item--text">Hour</div>
+                </div>
+                <div class="counter__item">
+                    <div class="counter__item--number">00</div>
+                    <div class="counter__item--text">Minute</div>
+                </div>
+                <div class="counter__item">
+                    <div class="counter__item--number">00</div>
+                    <div class="counter__item--text">Second</div>
+                </div>
+            </div>
+        </div>
+
         <div class="container-box">
             <form action="#" class="">
                 <p class="mb-5 text-md md:text-lg font-medium question">
@@ -73,30 +107,12 @@
             </form>
         </div>
 
-        <div class="exam-timer">
-            <!-- date format MM/DD/YYYY hh:mm:ss -->
-            <div class="counter jquery-countdown" data-date="03/01/2022 2:59:00">
-                <div class="counter__item">
-                    <div class="counter__item--number">00</div>
-                    <div class="counter__item--text">Hour</div>
-                </div>
-                <div class="counter__item">
-                    <div class="counter__item--number">00</div>
-                    <div class="counter__item--text">Minute</div>
-                </div>
-                <div class="counter__item">
-                    <div class="counter__item--number">00</div>
-                    <div class="counter__item--text">Second</div>
-                </div>
-            </div>
-        </div>
-
         <div class="circle-big">
-			<div class="text">4</div>
-			<svg>
+            <div class="text">4 / 30</div>
+            <!-- <svg>
 				<circle class="progress" cx="25" cy="25" r="20"></circle>
-			</svg>
-		</div>
+			</svg> -->
+        </div>
     </div>
 
 

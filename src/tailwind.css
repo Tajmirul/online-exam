@@ -41,11 +41,30 @@
 
 @layer components {
     .container-box__wrapper {
-        @apply w-screen h-screen bg-cover py-20 px-4 overflow-x-auto;
+        @apply w-screen h-screen bg-cover pt-24 md:pt-20 pb-20 px-4 overflow-x-auto;
         background-image: url('../img/bg.svg');
     }
+    .logo {
+        @apply absolute top-5 left-5 max-w-[60px];
+    }
+    .menu-bar {
+        @apply absolute top-5 right-5 w-40 z-10;
+    }
+    .menu-bar__toggler {
+        @apply rounded-full w-10 h-10 bg-white ml-auto block;
+    }
+    .menu-bar__list {
+        @apply absolute top-full right-0 w-full bg-white rounded shadow-md shadow-slate-900 p-2 opacity-0 invisible transform translate-y-1 transition-all;
+    }
+    .menu-bar__link {
+        @apply block w-full font-medium px-3 py-1 rounded text-stone-600 hover:text-stone-900 hover:bg-slate-100 transition-all;
+    }
+    .menu-bar:focus-within .menu-bar__list {
+        @apply opacity-100 visible translate-y-0;
+    }
+
     .container-box {
-        @apply mx-auto w-full max-w-[700px] min-h-[200px] bg-white rounded-lg p-5 transition-all;
+        @apply mx-auto w-full max-w-[500px] lg:max-w-[700px] min-h-[200px] bg-white rounded-lg p-5 transition-all;
     }
     .container-box--small {
         @apply max-w-[500px];
@@ -135,10 +154,10 @@
 
     /* time counter */
     .exam-timer {
-        @apply absolute top-[20px] right-[20px];
+        @apply mb-4 lg:absolute lg:top-[80px] lg:right-[20px];
     }
     .counter {
-        @apply flex;
+        @apply flex justify-center lg:justify-end;
     }
     .counter__item {
         @apply mx-1 rounded-md overflow-hidden min-w-[60px] text-center;
@@ -152,8 +171,7 @@
 
     /* question progress bar */
     .circle-big {
-        margin: 30px auto 25px auto;
-        @apply relative select-none w-[50px] h-[50px];
+        @apply absolute bottom-[30px] right-[30px] select-none px-5 py-2 h-[50px] border-4 border-secondary rounded-full;
     }
 
     .circle-big svg {
@@ -177,6 +195,7 @@
     }
 
     .circle-big .text {
-        @apply absolute top-1/2 left-1/2 transform translate-y-[-50%] translate-x-[-50%] text-white text-center font-medium;
+        /* @apply absolute top-1/2 left-1/2 transform translate-y-[-50%] translate-x-[-50%] text-white text-center font-medium; */
+        @apply text-white text-center font-medium;
     }
 }

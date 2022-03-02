@@ -38,13 +38,13 @@ $(document).ready(function () {
         });
         counter.on('finish.countdown', () => {
             $('.options input, .question-buttons button').attr("disabled", true);
-            Swal.fire({
-                title: 'Time is up!',
-                icon: 'info',
-                showConfirmButton: false,
-            });
+            // Swal.fire({
+            //     title: 'Time is up!',
+            //     icon: 'info',
+            //     showConfirmButton: false,
+            // });
             setTimeout(() => {
-                location.replace('result.html');
+                // location.replace('result.html');
             }, 5000);
         });
     });
