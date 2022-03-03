@@ -47,11 +47,11 @@
             <button class="menu-bar__toggler"><i class="fas fa-bars"></i></button>
 
             <div class="menu-bar__list">
-                <a href="#" class="menu-bar__link">Home</a>
-                <a href="#" class="menu-bar__link">Questions</a>
-                <a href="#" class="menu-bar__link">Account</a>
-                <a href="#" class="menu-bar__link">About Us</a>
-                <a href="#" class="menu-bar__link">Log Out</a>
+                <a href="#" class="menu-bar__link"><i class="menu-bar__icon fas fa-home"></i> Home</a>
+                <a href="#" class="menu-bar__link"><i class="menu-bar__icon fas fa-scroll"></i> Questions</a>
+                <a href="#" class="menu-bar__link"><i class="menu-bar__icon fas fa-user"></i> My Account</a>
+                <a href="#" class="menu-bar__link"><i class="menu-bar__icon fas fa-book-user"></i> About Us</a>
+                <a href="#" class="menu-bar__link"><i class="menu-bar__icon fas fa-sign-out"></i> Log Out</a>
             </div>
         </div>
 
@@ -76,7 +76,14 @@
         <div class="container-box">
             <form action="#" class="">
                 <p class="mb-5 text-md md:text-lg font-medium question">
-                    1. What is one of the big differences between traditional media and social media?
+                    Question 1 
+                    <span class="question__text hidden">What is one of the big differences between traditional media and social media?</span>
+                    <button type="button"
+                        class="speak-the-text rounded-full px-2 py-1 text-sm border-2 border-slate-300 hover:border-secondary"
+                        data-target=".question__text">
+                        <span>Listen</span>
+                        <i class="fas fa-volume"></i>
+                    </button>
                 </p>
 
                 <label class="theme-checkbox options">

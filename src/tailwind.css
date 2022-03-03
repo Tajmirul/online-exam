@@ -54,10 +54,14 @@
         @apply rounded-full w-10 h-10 bg-white ml-auto block;
     }
     .menu-bar__list {
-        @apply absolute top-full right-0 w-full bg-white rounded shadow-md shadow-slate-900 p-2 opacity-0 invisible transform translate-y-1 transition-all;
+        @apply absolute top-full right-0 w-full bg-white rounded shadow-md shadow-slate-900 p-2;
+        @apply opacity-0 invisible transform translate-y-1 transition-all;
     }
     .menu-bar__link {
-        @apply block w-full font-medium px-3 py-1 rounded text-stone-600 hover:text-stone-900 hover:bg-slate-100 transition-all;
+        @apply block w-full px-3 py-1 text-sm rounded text-stone-600 hover:text-stone-900 hover:bg-slate-100 transition-all;
+    }
+    .menu-bar__icon {
+        @apply text-lg mr-2;
     }
     .menu-bar:focus-within .menu-bar__list {
         @apply opacity-100 visible translate-y-0;
@@ -197,5 +201,20 @@
     .circle-big .text {
         /* @apply absolute top-1/2 left-1/2 transform translate-y-[-50%] translate-x-[-50%] text-white text-center font-medium; */
         @apply text-white text-center font-medium;
+    }
+
+    /* file upload input style */
+    .image-upload {
+        @apply relative flex items-center justify-center bg-indigo-100 rounded-lg cursor-pointer;
+    }
+    .image-upload__image {
+        @apply w-full rounded-lg cursor-pointer;
+    }
+    .image-upload__input {
+        @apply pointer-events-none opacity-0 hidden;
+    }
+
+    .speak-the-text {
+        @apply text-center text-lg font-medium hover:text-secondary;
     }
 }

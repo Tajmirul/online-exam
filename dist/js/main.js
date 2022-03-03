@@ -49,6 +49,38 @@ $(document).ready(function () {
         });
     });
 
+    // load uploaded image
+    $('.image-upload__input[type=file]').change(function (event) {
+        const file = event.target.files[0];
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            $(this).parent().find('.image-upload__image').attr('src', e.target.result);
+        };
+        reader.readAsDataURL(file);
+    });
+
+    // speak some text
+    $('.speak-the-text').click(function () {
+        const speaker = window.speechSynthesis;
+
+        if (speaker.speaking) {
+            speaker.cancel();
+            return;
+        }
+        const text = $($(this).data('target')).text();
+        const msg = new SpeechSynthesisUtterance();
+        msg.text = text;
+        msg.onend = (e) => {
+            $(this).find('i').toggleClass('fa-volume fa-pause');
+            $(this).find('span').text('Listen');
+        }
+        msg.onstart = () => {
+            $(this).find('i').toggleClass('fa-volume fa-pause');
+            $(this).find('span').text('Pause');
+        }
+        speaker.speak(msg);
+    })
+
     //for menu active class
     //     $('.portfolio-menu button').on('click', function (event) {
     //         $(this).siblings('.active').removeClass('active');
