@@ -69,6 +69,10 @@ $(document).ready(function () {
         }
         const text = $($(this).data('target')).text();
         const msg = new SpeechSynthesisUtterance();
+        msg.voice = speechSynthesis.getVoices().forEach(function (voice) {
+            // console.log(voice)
+            return voice.name === 'Microsoft Zira - English (United States)';
+        });
         msg.text = text;
         msg.onend = (e) => {
             $(this).find('i').toggleClass('fa-volume fa-pause');
@@ -79,7 +83,7 @@ $(document).ready(function () {
             $(this).find('span').text('Pause');
         }
         speaker.speak(msg);
-    })
+    });
 
     //for menu active class
     //     $('.portfolio-menu button').on('click', function (event) {
